@@ -1,0 +1,6 @@
+# Displays the status of the agent, jobs pending, and if the agent is linked or not linked to server.
+nessuscli agent status
+# Updates agent hostnames automatically
+nessuscli fix --set update_hostname="<value>"
+#
+nessus -q -x -T html 192.168.1.1 1241 admin adminpassword filewithtargets.txt resultsfile.html
