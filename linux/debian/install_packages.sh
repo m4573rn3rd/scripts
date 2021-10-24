@@ -1,6 +1,17 @@
 # Script to install packages for a list.
 # Because why not
 
+
+
+# This is a simple example
+
+#!/bin/sh
+#LIST_OF_APPS="a b c d e"
+#aptitude update
+#aptitude install -y $LIST_OF_APPS
+
+
+
 #!/bin/bash
 
 set -eu -o pipefail # If there is an error fail and report it also debug all lines 
@@ -20,7 +31,8 @@ while read -r p ; do sudo apt-get install -y $p ; done < <(cat << "EOF"
     espeak
     curl
     wget
-    
+    festival
+    openjdk-11-jdk     
 EOF
 )
 
