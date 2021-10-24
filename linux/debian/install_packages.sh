@@ -32,7 +32,8 @@ while read -r p ; do sudo apt-get install -y $p ; done < <(cat << "EOF"
     curl
     wget
     festival
-    openjdk-11-jdk     
+    openjdk-11-jdk
+    virtualbox
 EOF
 )
 

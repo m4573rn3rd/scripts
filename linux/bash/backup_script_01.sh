@@ -2,13 +2,9 @@
 
 #Variables
 
-
 #Speach
 echo "getting started"
 say -v Sam -r 250 "The current local time is" `date +%l:%M" "%p`;afplay /System/Library/Sounds/Glass.aiff
-
-
-
 
 say "Connecting to main server"
 
@@ -21,8 +17,6 @@ sudo rsync -avHe ssh user@192.168.1.100:/home/user/Mail /cloud/yourdomain | say
 
 say "backing up webserver logs"
 echo "backing up webserver logs"
-
-
 
 
 #!/usr/bin/expect
