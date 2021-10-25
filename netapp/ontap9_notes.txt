@@ -1,1 +1,14 @@
 # General notes of netapp ontap 9
+https://docs.netapp.com/us-en/ontap/pdfs/sidebar/Installation_and_setup_using_the_ONTAP_CLI.pdf
+https://library.netapp.com/ecmdocs/ECMLP2862544/html/index.html
+
+
+# Show export policy 
+vserver export-policy rule show
+
+# Show current snap mirror
+snapmirror show
+
+# Show more info about ongoing snap mirror
+snapmirror show -destination-path cluster2-vs2.example.com:dp_dst1  
+
