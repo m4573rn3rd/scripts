@@ -32,4 +32,3 @@ system health alert show
 
 # Environmental Information
 system node environment sensors show
-

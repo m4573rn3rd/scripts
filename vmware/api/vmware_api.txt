@@ -1,0 +1,5 @@
+#This is an api example for vmware. 
+
+
+# Get Token base67 example {username@vsphere.local:password}
+curl  --insecure -X POST -H "Authorization: Basic base64 " https://vsphereip/api/session
