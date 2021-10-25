@@ -40,6 +40,7 @@ wget https://download2.rstudio.org/server/centos7/x86_64/rstudio-server-rhel-202
 sudo yum install rstudio-server-rhel-2021.09.0-351-x86_64.rpm
 sudo yum install -y R
 
-
+# To stop the services run 
+sudo service  rstudio-server stop
 # You may need to run 
 #sudo yum install -y R --skip-broken
