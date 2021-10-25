@@ -1,0 +1,1 @@
+# General notes of netapp ontap 9
