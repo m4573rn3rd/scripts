@@ -1,7 +1,7 @@
 # General notes of netapp ontap 9
 https://docs.netapp.com/us-en/ontap/pdfs/sidebar/Installation_and_setup_using_the_ONTAP_CLI.pdf
 https://library.netapp.com/ecmdocs/ECMLP2862544/html/index.html
-
+# When a source volume and destination volume are in snapmirrored state and you schedule the relation ship between to update secondary volume then destination will be read- only, untill and unless you break the relation ship between the existing the volumes then the  snapmirrored destination volume can be read and write. when you clone the secondary volume it can be read and write when you split it from parent volume.
 
 # Show export policy 
 vserver export-policy rule show
@@ -11,4 +11,25 @@ snapmirror show
 
 # Show more info about ongoing snap mirror
 snapmirror show -destination-path cluster2-vs2.example.com:dp_dst1  
+
+# Health Status 
+system health status show
+system health subsystem show
+system health config show
+
+# Checking Connections
+storage shelf show -connectivity
+
+# This will show the disk on the storage system. 
+storage disk show
+
+
+# Show storage ports 
+storage port show
+
+
+system health alert show
+
+# Environmental Information
+system node environment sensors show
 

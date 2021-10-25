@@ -1,0 +1,11 @@
+# Example Payloads
+https://yourip/api/private/cli/volume <- Getting this url will return all volumes.
+
+# This will show volume space. 
+https://yourip/api/private/cli/volume/?fields=size,percent-used&pretty=false
+
+
+# Example with curl you will need to encode your password in base64 here https://devpal.co/base64-encode/
+curl --insecure -H 'Authorization: Basic YWRtaW46RandomDEzNzI=' GET https://yourip/api/private/cli/volume/?fields=size,percent-used
+
+

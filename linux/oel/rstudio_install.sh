@@ -1,4 +1,4 @@
-# Rstudio install on oel 7.9
+# Rstudio install on oel 9.9
 
 #Enable epel repo
 vi /etc/yum.repos.d/oracle-linux-ol7.repo
