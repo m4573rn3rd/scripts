@@ -6,4 +6,9 @@
 ![GitHub Logo](https://github.com/m4573rn3rd/scripts/tree/main/slack/img/readme_img/1.png)
 Format: ![Alt Text](url)
 
-![alt text](https://raw.githubusercontent.com/m4573rn3rd/scripts/main/slack/img/readme_img/1.pnghttps://github.com/m4573rn3rd/scripts/tree/main/slack/img/readme_img/1.png)
+
+
+<p align="center">
+  <img src="your_relative_path_here" width="350" title="hover text">
+  <img src="https://github.com/m4573rn3rd/scripts/tree/main/slack/img/readme_img/1.pngyour_relative_path_here_number_2_large_name" width="350" alt="accessibility text">
+</p>
