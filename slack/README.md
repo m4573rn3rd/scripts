@@ -1,14 +1,14 @@
 # Slack bot examples and such
 
 # Step One
-![alt text](https://github.com/m4573rn3rd/scripts/tree/main/slack/img/readme_img/1.png?raw=true)
+![alt text](https://tooinnovative.s3.amazonaws.com/app_icon_one.png)
 
-![GitHub Logo](https://github.com/m4573rn3rd/scripts/slack/img/readme_img/1.png)
+![GitHub Logo](https://tooinnovative.s3.amazonaws.com/app_icon_one.png)
 Format: ![Alt Text](url)
 
 slack/img/readme_img/1.png
 
 <p align="center">
   <img src="your_relative_path_here" width="350" title="hover text">
-  <img src="https://github.com/m4573rn3rd/scripts/tree/main/slack/img/readme_img/1.pngyour_relative_path_here_number_2_large_name" width="350" alt="accessibility text">
+  <img src="https://tooinnovative.s3.amazonaws.com/app_icon_one.png" width="350" alt="accessibility text">
 </p>
