@@ -1,0 +1,8 @@
+# General notes about slack api
+
+# Block Kit Url
+https://api.slack.com/block-kit
+
+# Block kit builder
+https://app.slack.com/block-kit-builder/
+
