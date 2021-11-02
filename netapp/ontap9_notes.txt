@@ -38,11 +38,5 @@ vserver show
 
 # volume create
 
-vol create -vserver SVM_Name -volume volume_dest -language C.UTF-8 -size 800GB -type DP -aggregate agg1 -space-guarantee none
 
-snapmirror modify -destination-path SVM_OraData:HYPDEV_OraData_SVM24_dest -schedule daily
-
-snapmirror initialize -destination-path SVM_OraData:HYPDEV_OraData_SVM24_dest
-
-show -destination-path SVM_OraData:HYPDEV_OraData_SVM24_dest -fields lag-time ,state ,status
 
