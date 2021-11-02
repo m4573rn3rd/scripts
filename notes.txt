@@ -1,1 +1,8 @@
 ############### Just a random group of script ###############
+
+
+# Images 
+
+# This is a general icon image in 512x512
+https://tooinnovative.s3.amazonaws.com/app_icon_one.png
+
