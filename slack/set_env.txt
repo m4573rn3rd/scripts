@@ -1,5 +1,15 @@
+You might want to read this.
+https://scholarworks.lib.csusb.edu/cgi/viewcontent.cgi?article=1856&context=etd
+ 
+
 # You need to set you env 
+# Linux
+
 export SLACK_APP_TOKEN=xapp
 export SLACK_BOT_TOKEN=xoxb
 echo $SLACK_APP_TOKEN
 echo $SLACK_BOT_TOKEN
+# Windows 
+set SLACK_APP_TOKEN=xapp
+set SLACK_BOT_TOKEN=xoxb
+

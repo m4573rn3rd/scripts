@@ -1,6 +1,8 @@
-#!/usr/local/bin/python2
 import aiml
+import os
 import time
+from slack_bolt import App
+from slack_bolt.adapter.socket_mode import SocketModeHandler
 from utils import get_args
 from utils import get_api_keys
 from utils import connect_to_slack_rtm_api
@@ -10,12 +12,20 @@ from utils import get_bot_id
 from utils import configure_chatbot
 from utils import is_message_to_chatbot
 from utils import drop_botname_from_message
+from slack import WebClient
+from slack_bolt.app.app import App
+
+app = App(token=os.environ.get("SLACK_BOT_TOKEN"))
+SlackClient = WebClient(os.environ.get("SLACK_BOT_TOKEN"))
+connected, sc = App(token=os.environ.get("SLACK_BOT_TOKEN"))
+kernel = aiml.Kernel()
+
+    
+
 
 args = get_args()
 channels = args.channel
 
-api_keys = get_api_keys("api_keys.txt")
-connected, sc = connect_to_slack_rtm_api(api_keys["slack_api_key"])
 
 if connected:
   kernel = aiml.Kernel()
@@ -23,11 +33,16 @@ if connected:
   kernel.respond("load aiml b")
   configure_chatbot(kernel)
 
-  channels_dict = get_channels_ids(sc, channels)
-  join_channels(sc, channels_dict)
-  bot_id = get_bot_id(sc, kernel.getBotPredicate("name"))
+  channels_dict = get_c@app.event("message")
+def handle_message_events(body, logger):
+   # logger.info(body)channels_ids(sc, channels)
+    join_channels(sc, channels_dict)
+    bot_id = get_bot_id(sc, kernel.getBotPredicate("name"))
 
-  while True:
+
+
+
+while True:
     events = sc.rtm_read()
     if events:
       for event in events:
@@ -50,4 +65,8 @@ if connected:
           pass
     time.sleep(1)
 else:
-  print 
+  
+
+
+
+    SocketModeHandler(app, os.environ["SLACK_APP_TOKEN"]).start()

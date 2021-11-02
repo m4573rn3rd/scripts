@@ -6,3 +6,5 @@ https://api.slack.com/block-kit
 # Block kit builder
 https://app.slack.com/block-kit-builder/
 
+# Slack bot in aiml notes.
+
