@@ -32,3 +32,11 @@ system health alert show
 
 # Environmental Information
 system node environment sensors show
+
+# This is helpfull 
+vserver show 
+
+# volume create
+
+
+
