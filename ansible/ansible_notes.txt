@@ -1,0 +1,3 @@
+# Ansible notes.
+
+Download the supported os iso in this case I am using centos.

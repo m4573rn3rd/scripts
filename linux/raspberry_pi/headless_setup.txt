@@ -1,0 +1,5 @@
+#Download Image
+#https://downloads.raspberrypi.org/raspios_lite_armhf/images/raspios_lite_armhf-2021-05-28/2021-05-07-raspios-buster-armhf-lite.zip
+#Download iso writer.
+#https://github.com/pbatard/rufus/releases/download/v3.15/rufus-3.15.exe
+#Create an empty text file named "ssh" with no file ext and save it to the root of the sd card.

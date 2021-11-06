@@ -7,7 +7,7 @@ from argparse import ArgumentParser
 from slack import WebClient
 
 def get_args():
-  parser = ArgumentParser(description="Mobot is a Slack Python AIML Chatbot")
+  parser = ArgumentParser(description="")
   parser.add_argument("-j", "--join", nargs="+", dest="channel", default="all",
                       help="join list of channels (ex. general random)")
   return parser.parse_args()
