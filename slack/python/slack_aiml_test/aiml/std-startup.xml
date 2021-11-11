@@ -1,0 +1,12 @@
+<aiml version="1.0.1" encoding="UTF-8">
+    <!-- std-startup.xml -->
+    <category>
+        <pattern>LOAD AIML B</pattern>
+
+        <template>
+                <learn>aiml/001.aiml</learn>
+                <learn>aiml/002.aiml</learn>
+                <learn>aiml/003.aiml</learn> 
+        </template>
+    </category>
+</aiml>

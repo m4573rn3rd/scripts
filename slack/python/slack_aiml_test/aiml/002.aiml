@@ -1,0 +1,12 @@
+<aiml version = "1.0.1" encoding = "UTF-8"?>
+<category>
+  <pattern>btc price</pattern>
+    <template>
+        <jsonpath>
+            <path>$.bpi.USD.rate</path>
+        <callapi>
+            <url>http://api.coindesk.com/v1/bpi/currentprice.json</url>
+        </callapi>
+        </jsonpath>
+    </template>
+</category>

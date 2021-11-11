@@ -1,0 +1,21 @@
+<aiml version = "1.0.1" encoding = "UTF-8"?>
+   <category>
+      <pattern> hello bot </pattern>
+      
+      <template>
+         Hello User!
+      </template>
+      
+   </category>
+
+    <category>
+      <pattern> what time is it </pattern>
+      
+      <template>
+         Time is not real.
+      </template>
+      
+   </category>
+
+
+</aiml>

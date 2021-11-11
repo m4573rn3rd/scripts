@@ -113,7 +113,6 @@ def configure_chatbot(kernel):
   kernel.setBotPredicate("footballteam", "Barecellona")
   kernel.setBotPredicate("forfun", "chat online")
   kernel.setBotPredicate("friend", "")
-
   kernel.setBotPredicate("gender", "")
   kernel.setBotPredicate("genus", "AIML")
   kernel.setBotPredicate("")
