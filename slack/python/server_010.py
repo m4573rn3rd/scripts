@@ -23,8 +23,6 @@ import pandas as pd
 import random
 
 
-
-
 #logging.basicConfig(level=logging.DEBUG, filename='std.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
 # newvar = re.compile('what time is it in (?P<place>[A-Za-z/_]+)[?]$', flags=re.IGNORECASE)
 
@@ -33,7 +31,6 @@ app = App(token=os.environ.get("SLACK_BOT_TOKEN"))
 client = WebClient()
 api_response = client.api_test() 
 app2 = Flask(__name__)
-
 
 ###################################################################
 #   Startup
@@ -58,8 +55,6 @@ report = pd.DataFrame(list(report.find()))
 #print(test.iat[0,0])
 #print(report.iat[0,1])
 
-
-
 ###################################################################
 #   For Later Devlopment 
 ###################################################################
@@ -72,8 +67,6 @@ def getTime():
     print("browser time: ", request.args.get("time"))
     print("server time : ", time.strftime('%A %B, %d %Y %H:%M:%S'));
     return "Done"
-
-
 
 ###################################################################
 #   Internal Api Start
@@ -167,7 +160,6 @@ def not_found(error=None):
 #   Slack Strart
 ###################################################################
 
-
 @app.message(re.compile("(hi|yo|hey)"))
 def say_hello_regex(say, context):
     # regular expression matches are inside of context.matches
@@ -185,22 +177,9 @@ def message_hello(message, say):
     x1
     say(f"Check Database <@{message['user']}>!")
 
-
-
-
-
-
-
-
 @app.message("bye")
 def message_bye(message, say): 
     say(f"Goodbye <@{message['user']}>!")
-
-
-
-
-
-
 
 ###################################################################
 #   Prints time to the user.
@@ -219,8 +198,7 @@ def message_hello(message, say, respond):
 #   Process 
 ###################################################################
 def respond_to_slack_within_3_seconds(body, ack):
-    text = body.get("text")
-    
+    text = body.get("text") 
     if text is None or len(text) == 0:
         ack(f":x: Usage: /start-process ")
     else:
@@ -233,21 +211,16 @@ def run_long_process(respond, body):
      respond(f"count: {i}")    
     time.sleep(6)  # longer than 3 seconds
     
-    
-    
     end = time.time()
     respond(f"Completed! (task: {body['text']})")
     respond(f"Runtime of the program is: {end - start}")
-    print(f"Runtime of the program is {end - start}")
-  
+    print(f"Runtime of the program is {end - start}") 
     hold2 = float(end - start) 
     myclient = pymongo.MongoClient("mongodb://localhost:27017/")
     mydb = myclient["python"]
     mycol3 = mydb["python_dbtest"]
     botlog = { "appname": "longprocess", "command": "longprocess", "time":  hold2 }
     mycol3.insert_one(botlog)
-
-
 
 app.command("/start-process")(
     # ack() is still called within 3 seconds
@@ -268,7 +241,9 @@ def ask_who(ack, message, say, respond, body):
     say(f"<@{message['user_id']}>")
     #respond(f"Happy <@{body['user_id']}>!")
 
-
+@app.event("message")
+def handle_message_events(body, logger):
+    logger.info(body)
 
 @app.action("link_button")
 def handle_buttons(ack, respond, logger, context, body, client):
@@ -281,13 +256,10 @@ def handle_buttons(ack, respond, logger, context, body, client):
         view={ ... }
     )
 
-
-
 @app.error
 def custom_error_handler(error, body, logger):
     logger.exception(f"Error: {error}")
     logger.info(f"Request body: {body}")
-
 
 
 if __name__ == "__main__":
