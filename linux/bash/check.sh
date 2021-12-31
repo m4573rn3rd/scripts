@@ -1,0 +1,13 @@
+pforth --version
+gforth --version
+R --version 
+git --version 
+puppet --version
+java -version
+ansible --version
+chef-client --version
+puppet --version
+/home/rabbit/.local/lib/aws/bin/aws --version
+salt --version
+mysql --version
+python --version
