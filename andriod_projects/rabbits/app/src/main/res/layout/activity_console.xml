@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+    <Button
+        android:id="@+id/btnOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Turn On" android:layout_marginLeft="100dp"
+        android:layout_marginTop="200dp" />
+    <Button
+        android:id="@+id/btnOFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnOn"
+        android:layout_toRightOf="@+id/btnOn"
+        android:text="Turn OFF" />
+
+
+    <Button
+        android:id="@+id/wibtnOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wifi Turn On" android:layout_marginLeft="70dp" android:layout_marginTop="250dp" />
+    <Button
+        android:id="@+id/wibtnOFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/wibtnOn"
+        android:layout_toRightOf="@+id/wibtnOn"
+        android:text="Wifi Turn OFF" />
+
+    <Button
+        android:id = "@+id/gps"
+        android:layout_width = "fill_parent"
+        android:layout_height = "wrap_content"
+        android:layout_marginTop="350dp"
+        android:text = "getlocation"/>
+
+
+
+
+    <TextView
+        android:id="@+id/latitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Latitude" />
+
+    <TextView
+        android:id="@+id/longitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="Longitude" />
+
+    <Button
+        android:id = "@+id/dndon"
+        android:layout_width = "fill_parent"
+        android:layout_height = "wrap_content"
+        android:layout_marginTop="450dp"
+        android:text = "DND"/>
+
+
+
+
+
+
+
+
+</RelativeLayout>
+
